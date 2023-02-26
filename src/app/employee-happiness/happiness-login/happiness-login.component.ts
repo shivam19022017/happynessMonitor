@@ -7,13 +7,15 @@ import { QuestionService } from '../service/question.service';
   styleUrls: ['./happiness-login.component.css']
 })
 export class HappinessLoginComponent {
-  constructor(private questionService: QuestionService){
+  constructor(private questionService: QuestionService) {
 
   }
-showQuestions= false;
-sid: string;
-  submit(sid:any){
+  showQuestions = false;
+  sid: string;
+  submit(sid: any) {
+    if (sid) {
       this.sid = sid;
       this.showQuestions = true;
+    }
   }
 }
