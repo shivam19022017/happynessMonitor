@@ -1,0 +1,13 @@
+<div class="card" *ngIf="!showQuestions">
+  <div class="card-header">
+    Enter SID
+  </div>
+  <div class="card-body">
+    <div class="input-group mb-3">
+      <input #sid type="text" class="form-control" placeholder="Username" aria-label="Username"
+             aria-describedby="basic-addon1">
+    </div>
+    <button type="button" (click)="submit(sid.value)" class="btn btn-primary">Get Questions</button>
+  </div>
+</div>
+<app-happiness-question *ngIf="showQuestions" [userName] = sid></app-happiness-question>
